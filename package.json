@@ -1,0 +1,21 @@
+{
+  "name": "liquidity-tx-exporter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "scan:redemptions": "node scripts/scanRedemptions.js",
+    "report:redemption": "node scripts/reportRedemptionTx.js",
+    "report:recent": "node scripts/reportRecentTroveTx.js",
+    "rescan:trove-events": "node scripts/scanRedemptions.js --trove-only --reset-trove-events",
+    "scan:sp": "node scripts/scanStabilityPool.js",
+    "report:sp": "node scripts/reportStabilityPool.js",
+    "rescan:sp": "node scripts/resetStabilityPool.js",
+    "checkdb": "node scripts/checkDB.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.0.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2"
+  }
+}
